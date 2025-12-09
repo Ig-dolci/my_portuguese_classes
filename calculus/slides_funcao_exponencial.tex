@@ -38,6 +38,7 @@
 \lstset{style=mystyle}
 
 \title{Função Exponencial e Aplicações na Engenharia}
+\subtitle{Aula Adaptada (30 min)}
 \author{Daiane I. Dolci}
 \date{\today}
 
@@ -47,214 +48,157 @@
     \titlepage
 \end{frame}
 
-\begin{frame}{Objetivos da Aula}
+\begin{frame}{Objetivos da Aula (30 min)}
     \begin{enumerate}
-        \item \textbf{Conhecer o Número de Euler ($e$):} Entender seu valor como constante e sua importância na natureza.
-        \item \textbf{Definição e Propriedades:} Compreender a função exponencial básica ($a^x$), a natural ($e^x$) e suas restrições.
-        \item \textbf{Forma Geral:} Analisar a equação $f(x) = c \cdot a^x + b$ e interpretar o efeito gráfico de seus parâmetros.
-        \item \textbf{Aplicações Práticas:} Resolver problemas de engenharia envolvendo resfriamento, circuitos elétricos e decaimento radioativo.
-        \item \textbf{Tópicos Avançados:} Visualizar o uso de exponenciais em Machine Learning (Função Sigmoide).
+        \item \textbf{Conceitos Fundamentais (10 min):} 
+        \begin{itemize}
+            \item Definição e comportamento gráfico ($a^x$).
+            \item O número de Euler ($e$) e a exponencial natural.
+        \end{itemize}
+        \item \textbf{Modelagem e Aplicação (20 min):} 
+        \begin{itemize}
+            \item A forma $f(x) = c \cdot e^{kx} + b$.
+            \item Interpretação física dos parâmetros.
+            \item Estudo de caso: Lei de Resfriamento de Newton.
+        \end{itemize}
+        \item \textbf{Prática:} Exercícios propostos para fixação extraclasse.
     \end{enumerate}
 \end{frame}
 
-\section{O Número de Euler (e)}
+\section{1. Definição da Função Exponencial}
 
-\begin{frame}{1. Preliminar: O Número de Euler ($e$)}
-    O número de Euler, representado pela letra \textbf{e}, é uma constante matemática fundamental, assim como o número $\pi$.
-    
-    \vspace{0.5cm}
-    
-    Ele é um número irracional (infinitas casas decimais que não se repetem).
-    
-    \begin{block}{Valor Aproximado}
-        $$e \approx 2,718$$
-    \end{block}
-\end{frame}
-
-\begin{frame}{Por que $e$ é importante na Engenharia?}
-    O número \textbf{e} aparece naturalmente em equações que descrevem como as coisas mudam na natureza:
-    
-    \begin{itemize}
-        \item \textbf{Transferência de Calor:} Como um objeto esfria ao longo do tempo.
-        \item \textbf{Crescimento e Decaimento:} Populações, radioatividade.
-        \item \textbf{Circuitos Elétricos:} Carga e descarga de capacitores.
-    \end{itemize}
-\end{frame}
-
-\section{Exemplos Aplicados}
-
-\begin{frame}{2. Exemplos Aplicados à Engenharia}
-    \textbf{Exemplo 1: Resfriamento de um Motor (Lei de Newton)}
-    
-    \vspace{0.3cm}
-    
-    \textbf{Problema:} Um motor a 120°C é desligado em uma sala a 25°C. A temperatura decresce segundo:
-    
-    \begin{equation*}
-        T(t) = 25 + 95e^{-0.08t}
-    \end{equation*}
-    
-    onde $t$ está em minutos.
-    
-    \vspace{0.5cm}
-    
-    \textit{(No notebook, visualizamos o gráfico de decaimento desta função)}
-\end{frame}
-
-\section{Definição da Função Exponencial}
-
-\begin{frame}{3. Definição da Função Exponencial}
-    Uma \textbf{função exponencial} é aquela onde a variável está no expoente.
+\begin{frame}{1. Definição da Função Exponencial}
+    Uma \textbf{função exponencial} possui a variável no expoente.
     
     \begin{block}{Forma Básica}
         $$f(x) = a^x$$
     \end{block}
     
     onde a base $a$ é um número real positivo e diferente de 1 ($a > 0, a \neq 1$).
-\end{frame}
-
-\begin{frame}{Restrições para a base $a$}
-    \begin{enumerate}
-        \item \textbf{Por que $a > 0$?}
-        \begin{itemize}
-            \item Se a base fosse negativa (ex: $a = -2$), teríamos problemas com expoentes fracionários (raízes pares de números negativos).
-            \item Ex: $(-2)^{0,5} = \sqrt{-2} \notin \mathbb{R}$.
-        \end{itemize}
-        
-        \vspace{0.3cm}
-        
-        \item \textbf{Por que $a \neq 1$?}
-        \begin{itemize}
-            \item Se $a = 1$, então $f(x) = 1^x = 1$ (Função Constante).
-            \item Perde a característica de crescimento/decaimento.
-        \end{itemize}
-    \end{enumerate}
-\end{frame}
-
-\begin{frame}{Exemplo Simples: $f(x) = 2^x$}
-    Vamos visualizar uma função exponencial simples onde a base é 2.
     
     \vspace{0.5cm}
     
-    \begin{center}
-    \begin{tabular}{|c|c|}
-        \hline
-        $x$ & $f(x) = 2^x$ \\
-        \hline
-        -3 & $1/8 = 0,125$ \\
-        -2 & $1/4 = 0,25$ \\
-        -1 & $1/2 = 0,5$ \\
-        0 & 1 \\
-        1 & 2 \\
-        2 & 4 \\
-        3 & 8 \\
-        \hline
-    \end{tabular}
-    \end{center}
-    
-    \vspace{0.2cm}
-    \centering \small{Os valores dobram a cada passo inteiro de $x$.}
+    \textbf{Comportamento (Crescimento vs Decaimento):}
+    \begin{itemize}
+        \item \textbf{Crescente ($a > 1$):} Aumenta rapidamente.
+        \begin{itemize} \item Ex: $2^x, e^x, 10^x$ \end{itemize}
+        \item \textbf{Decrescente ($0 < a < 1$):} Diminui em direção a zero.
+        \begin{itemize} \item Ex: $(0,5)^x, (1/2)^x, e^{-x}$ \end{itemize}
+    \end{itemize}
 \end{frame}
 
-\begin{frame}{A Função Exponencial Natural}
-    O caso mais importante na engenharia e ciências é quando a base é o número de Euler ($a = e$).
+\begin{frame}{Restrições da Base $a$}
+    Por que existem restrições?
+    \begin{enumerate}
+        \item \textbf{$a > 0$:} Bases negativas geram números complexos em raízes pares.
+        \item \textbf{$a \neq 1$:} Se $a=1$, $f(x)=1^x=1$ (constante), sem interesse para modelagem de crescimento.
+    \end{enumerate}
+\end{frame}
+
+\section{2. O Número de Euler}
+
+\begin{frame}{2. O Número de Euler e a Exponencial Natural}
+    O caso mais importante na Engenharia é a base \textbf{e}.
+    
+    $$e \approx 2,718$$
     
     \begin{block}{Função Exponencial Natural}
         $$f(x) = e^x$$
     \end{block}
     
     \textbf{Propriedades:}
-    \begin{enumerate}
-        \item \textbf{Domínio:} $\mathbb{R}$
-        \item \textbf{Imagem:} Reais positivos ($f(x) > 0$)
-        \item \textbf{Intercepto y:} Passa por $(0, 1)$
-        \item \textbf{Crescimento:} Sempre crescente ($e > 1$)
-        \item \textbf{Assíntota:} Eixo x ($y=0$)
-        \item \textbf{Derivada:} $\frac{d}{dx}(e^x) = e^x$
-    \end{enumerate}
+    \begin{itemize}
+        \item Sempre crescente ($e > 1$).
+        \item Passa por $(0, 1)$.
+        \item Assíntota no eixo x ($y=0$).
+    \end{itemize}
 \end{frame}
 
-\section{Forma Geral}
+\section{3. Modelagem Matemática}
 
-\begin{frame}{4. Forma Geral da Função Exponencial}
-    Na modelagem real, usamos parâmetros de escala e deslocamento.
+\begin{frame}{3. Forma Geral e Modelagem}
+    Para modelar fenômenos reais, usamos a forma parametrizada:
     
-    \begin{block}{Equação Geral}
-        $$f(x) = c \cdot a^x + b$$
+    \begin{block}{Equação de Modelagem}
+        $$f(x) = c \cdot e^{kx} + b$$
     \end{block}
     
     \textbf{Significado dos Parâmetros:}
-    \begin{itemize}
-        \item \textbf{$a$ (Base):} Rapidez do crescimento ($a>1$) ou decaimento ($0<a<1$).
-        \item \textbf{$c$ (Coeficiente):} Amplitude ou valor inicial. Se negativo, inverte o gráfico.
-        \item \textbf{$b$ (Termo Independente):} Deslocamento vertical. Define a \textbf{assíntota horizontal} ($y=b$).
-    \end{itemize}
+    \begin{enumerate}
+        \item \textbf{$b$ (Assíntota Horizontal):} Valor de equilíbrio ($t \to \infty$). Ex: Temp. ambiente.
+        \item \textbf{$k$ (Taxa):} 
+        \begin{itemize}
+            \item $k > 0$: Crescimento.
+            \item $k < 0$: Decaimento.
+        \end{itemize}
+        \item \textbf{$c$ (Amplitude):} Diferença inicial em relação à assíntota.
+    \end{enumerate}
 \end{frame}
 
-\section{Exercícios}
+\section{4. Aplicação Prática}
 
-\begin{frame}{5. Exercícios - Parte 1: Conceitos Básicos}
-    \textbf{Exercício 1: Propriedades de Potência}
-    Simplifique:
+\begin{frame}{4. Aplicação: Lei de Resfriamento de Newton}
+    \textbf{Problema:} Um motor a 120°C é desligado em uma sala a 25°C.
+    
+    $$T(t) = 25 + 95e^{-0.08t}$$
+    
+    \textbf{Interpretação:}
     \begin{itemize}
-        \item a) $e^3 \cdot e^4$
-        \item b) $\frac{e^5}{e^2}$
-        \item c) $(e^2)^3$
+        \item \textbf{$b = 25$:} Temperatura da sala (o motor tende a 25°C).
+        \item \textbf{$c = 95$:} Diferença inicial ($120 - 25 = 95$).
+        \item \textbf{$k = -0.08$:} Taxa de resfriamento (negativa = decaimento).
+    \end{itemize}
+    
+    \vspace{0.5cm}
+    \textit{(Visualização gráfica no Notebook)}
+\end{frame}
+
+\section{5. Exercícios Propostos}
+
+\begin{frame}{5. Exercícios Propostos (Para Casa)}
+    \textbf{Parte 1: Conceitos}
+    \begin{itemize}
+        \item Propriedades de potência ($e^a \cdot e^b$, etc).
+        \item Identificar funções crescentes/decrescentes.
+    \end{itemize}
+    
+    \vspace{0.5cm}
+    
+    \textbf{Parte 2: Aplicações}
+    \begin{itemize}
+        \item \textbf{Carga de Capacitor:} $V_C(t) = 9(1 - e^{-2.5t})$
+        \item \textbf{Resfriamento de Café:} $T(t) = 22 + 63e^{-0.05t}$
+        \item \textbf{Decaimento Radioativo:} $M(t) = 50e^{-0.1t}$
     \end{itemize}
     
     \vspace{0.3cm}
-    
-    \textbf{Exercício 2: Avaliação de Funções}
-    Para $f(x) = 3 \cdot 2^x + 1$, calcule $f(0)$ e $f(1)$.
-    
-    \vspace{0.3cm}
-    
-    \textbf{Exercício 3: Crescente ou Decrescente?}
-    \begin{itemize}
-        \item a) $f(x) = 2^x$
-        \item b) $f(x) = (0,5)^x$
-        \item c) $f(x) = e^x$
-    \end{itemize}
+    \centering \small{Resolva os exercícios detalhados no final do Notebook.}
 \end{frame}
 
-\begin{frame}{5. Exercícios - Parte 2: Aplicações}
-    \textbf{Exercício 4: Carga de Capacitor}
-    $$V_C(t) = 9(1 - e^{-2.5t})$$
-    \begin{itemize}
-        \item Calcule para $t=0$ e $t=1$.
-        \item Qual a tensão máxima (assíntota)?
-    \end{itemize}
-    
-    \vspace{0.3cm}
-    
-    \textbf{Exercício 5: Resfriamento de Café}
-    $$T(t) = 22 + 63e^{-0.05t}$$
-    \begin{itemize}
-        \item Identifique a temperatura ambiente ($b$).
-        \item Identifique a temperatura inicial ($t=0$).
-    \end{itemize}
-\end{frame}
+\section{Extra}
 
-\section{Exemplo Adicional}
-
-\begin{frame}{6. Machine Learning (Função Sigmoide)}
-    Usada em classificação binária (probabilidades entre 0 e 1).
+\begin{frame}{6. Material Extra (Opcional): Machine Learning}
+    \textbf{Função Sigmoide (Logística)}
     
-    \begin{block}{Equação Sigmoide}
-        $$\sigma(x) = \frac{1}{1 + e^{-x}}$$
-    \end{block}
+    $$\sigma(x) = \frac{1}{1 + e^{-x}}$$
     
-    \textbf{Propriedades:}
     \begin{itemize}
-        \item $x \to +\infty \Rightarrow \sigma(x) \to 1$
-        \item $x \to -\infty \Rightarrow \sigma(x) \to 0$
-        \item $x = 0 \Rightarrow \sigma(0) = 0.5$
+        \item Converte valores reais em probabilidades (0 a 1).
+        \item Fundamental para Redes Neurais e Classificação.
     \end{itemize}
+    
+    \vspace{0.5cm}
+    % \centering \includegraphics[width=0.6\textwidth]{example-image-a} 
+    % Nota: No notebook geramos o gráfico real.
 \end{frame}
 
 \begin{frame}
     \centering
     \Huge \textbf{Obrigada!}
+    
+    \vspace{1cm}
+    \normalsize
+    Dúvidas?
 \end{frame}
 
 \end{document}
