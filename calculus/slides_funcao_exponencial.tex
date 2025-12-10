@@ -68,56 +68,66 @@
 \section{1. Definição da Função Exponencial}
 
 \begin{frame}{1. Definição da Função Exponencial}
-    Uma \textbf{função exponencial} possui a variável no expoente.
+    \textbf{Definição Formal:}
+    Seja $a \in \mathbb{R}$ tal que $a > 0$ e $a \neq 1$. A função exponencial é definida por:
     
-    \begin{block}{Forma Básica}
-        $$f(x) = a^x$$
-    \end{block}
+    $$f: \mathbb{R} \to (0, +\infty)$$
+    $$f(x) = a^x$$
     
-    onde a base $a$ é um número real positivo e diferente de 1 ($a > 0, a \neq 1$).
-    
-    \vspace{0.5cm}
-    
-    \textbf{Comportamento (Crescimento vs Decaimento):}
+    \textbf{Elementos:}
+    \begin{itemize}
+        \item \textbf{Domínio:} $\mathbb{R}$ (existe para todo $x$).
+        \item \textbf{Imagem:} $(0, +\infty)$ (sempre positiva).
+        \item \textbf{Base $a$:} Define o crescimento/decaimento.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Comportamento Gráfico}
     \begin{itemize}
         \item \textbf{Crescente ($a > 1$):} Aumenta rapidamente.
         \begin{itemize} \item Ex: $2^x, e^x, 10^x$ \end{itemize}
         \item \textbf{Decrescente ($0 < a < 1$):} Diminui em direção a zero.
         \begin{itemize} \item Ex: $(0,5)^x, (1/2)^x, e^{-x}$ \end{itemize}
     \end{itemize}
-\end{frame}
-
-\begin{frame}{Restrições da Base $a$}
-    Por que existem restrições?
-    \begin{enumerate}
-        \item \textbf{$a > 0$:} Bases negativas geram números complexos em raízes pares.
-        \item \textbf{$a \neq 1$:} Se $a=1$, $f(x)=1^x=1$ (constante), sem interesse para modelagem de crescimento.
-    \end{enumerate}
+    
+    \vspace{0.5cm}
+    \textbf{Restrições:} $a > 0$ (evitar complexos) e $a \neq 1$ (não ser constante).
 \end{frame}
 
 \section{2. O Número de Euler}
 
-\begin{frame}{2. O Número de Euler e a Exponencial Natural}
-    O caso mais importante na Engenharia é a base \textbf{e}.
+\begin{frame}{2. O Número de Euler ($e$)}
+    Entre todas as bases, uma é fundamental para a Engenharia:
     
     $$e \approx 2,718$$
     
-    \begin{block}{Função Exponencial Natural}
-        $$f(x) = e^x$$
+    \begin{block}{Propriedade Única}
+        A função $f(x) = e^x$ tem sua \textbf{taxa de variação igual ao seu próprio valor}.
     \end{block}
     
-    \textbf{Propriedades:}
+    Isso a torna ideal para modelar fenômenos naturais de mudança contínua.
+\end{frame}
+
+\begin{frame}{Conceito: Assíntota Horizontal}
+    \textbf{Definição Intuitiva:}
+    Uma linha imaginária que funciona como um "limite" ou "barreira" para o gráfico.
+    
+    \vspace{0.5cm}
+    
     \begin{itemize}
-        \item Sempre crescente ($e > 1$).
-        \item Passa por $(0, 1)$.
-        \item Assíntota no eixo x ($y=0$).
+        \item \textbf{Visualmente:} O gráfico se aproxima infinitamente da reta sem tocá-la.
+        \item \textbf{Na Engenharia:} Representa o \textbf{Estado de Equilíbrio}.
     \end{itemize}
+    
+    \begin{exampleblock}{Exemplo Físico}
+        No resfriamento de um café, a temperatura cai mas nunca fica menor que a temperatura da sala. A temperatura da sala é a \textbf{assíntota}.
+    \end{exampleblock}
 \end{frame}
 
 \section{3. Modelagem Matemática}
 
 \begin{frame}{3. Forma Geral e Modelagem}
-    Para modelar fenômenos reais, usamos a forma parametrizada:
+    Podemos usar qualquer base $a$, mas no Cálculo padronizamos tudo na base $e$ (conveniência matemática).
     
     \begin{block}{Equação de Modelagem}
         $$f(x) = c \cdot e^{kx} + b$$
@@ -125,13 +135,13 @@
     
     \textbf{Significado dos Parâmetros:}
     \begin{enumerate}
-        \item \textbf{$b$ (Assíntota Horizontal):} Valor de equilíbrio ($t \to \infty$). Ex: Temp. ambiente.
+        \item \textbf{$b$ (Assíntota):} Valor de equilíbrio ($t \to \infty$). Ex: Temp. ambiente.
         \item \textbf{$k$ (Taxa):} 
         \begin{itemize}
             \item $k > 0$: Crescimento.
             \item $k < 0$: Decaimento.
         \end{itemize}
-        \item \textbf{$c$ (Amplitude):} Diferença inicial em relação à assíntota.
+        \item \textbf{$c$ (Amplitude):} Diferença inicial ($f(0) = c + b$).
     \end{enumerate}
 \end{frame}
 
@@ -144,13 +154,13 @@
     
     \textbf{Interpretação:}
     \begin{itemize}
-        \item \textbf{$b = 25$:} Temperatura da sala (o motor tende a 25°C).
-        \item \textbf{$c = 95$:} Diferença inicial ($120 - 25 = 95$).
-        \item \textbf{$k = -0.08$:} Taxa de resfriamento (negativa = decaimento).
+        \item \textbf{$b = 25$:} Temperatura da sala (Assíntota/Equilíbrio).
+        \item \textbf{$c = 95$:} Diferença inicial ($120 - 25$).
+        \item \textbf{$k = -0.08$:} Taxa de resfriamento.
     \end{itemize}
     
-    \vspace{0.5cm}
-    \textit{(Visualização gráfica no Notebook)}
+    \vspace{0.3cm}
+    \textbf{Comportamento:} A temperatura cai rápido no início (grande diferença) e desacelera ao se aproximar do equilíbrio.
 \end{frame}
 
 \section{5. Exercícios Propostos}
