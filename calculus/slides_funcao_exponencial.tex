@@ -124,43 +124,47 @@
     \end{exampleblock}
 \end{frame}
 
-\section{3. Modelagem Matemática}
+\section{3. Motivação: O Resfriamento do Café}
 
-\begin{frame}{3. Forma Geral e Modelagem}
-    Podemos usar qualquer base $a$, mas no Cálculo padronizamos tudo na base $e$ (conveniência matemática).
+\begin{frame}{3. Motivação: O Resfriamento do Café}
+    Antes da teoria geral, vamos analisar um problema prático.
     
-    \begin{block}{Equação de Modelagem}
-        $$f(x) = c \cdot e^{kx} + b$$
-    \end{block}
-    
-    \textbf{Significado dos Parâmetros:}
-    \begin{enumerate}
-        \item \textbf{$b$ (Assíntota):} Valor de equilíbrio ($t \to \infty$). Ex: Temp. ambiente.
-        \item \textbf{$k$ (Taxa):} 
-        \begin{itemize}
-            \item $k > 0$: Crescimento.
-            \item $k < 0$: Decaimento.
-        \end{itemize}
-        \item \textbf{$c$ (Amplitude):} Diferença inicial ($f(0) = c + b$).
-    \end{enumerate}
-\end{frame}
-
-\section{4. Aplicação Prática}
-
-\begin{frame}{4. Aplicação: Lei de Resfriamento de Newton}
-    \textbf{Problema:} Um motor a 120°C é desligado em uma sala a 25°C.
-    
-    $$T(t) = 25 + 95e^{-0.08t}$$
-    
-    \textbf{Interpretação:}
-    \begin{itemize}
-        \item \textbf{$b = 25$:} Temperatura da sala (Assíntota/Equilíbrio).
-        \item \textbf{$c = 95$:} Diferença inicial ($120 - 25$).
-        \item \textbf{$k = -0.08$:} Taxa de resfriamento.
-    \end{itemize}
+    \textbf{O Problema:}
+    Uma xícara de café a \textbf{85$^\circ$C} é colocada em uma sala a \textbf{22$^\circ$C}.
     
     \vspace{0.3cm}
-    \textbf{Comportamento:} A temperatura cai rápido no início (grande diferença) e desacelera ao se aproximar do equilíbrio.
+    
+    A temperatura $T$ em função do tempo $t$ (min) segue a equação:
+    
+    $$T(t) = 22 + 63 \cdot e^{-0.05t}$$
+    
+    \vspace{0.3cm}
+    
+    \textbf{Observações:}
+    \begin{itemize}
+        \item O café esfria até atingir a temperatura da sala (22$^\circ$C).
+        \item A queda é rápida no início e lenta no final.
+    \end{itemize}
+\end{frame}
+
+\section{4. A Forma Geral e Modelagem}
+
+\begin{frame}{4. A Forma Geral e Modelagem}
+    O exemplo do café segue um padrão universal. Podemos generalizar para a \textbf{Forma Padrão}:
+    
+    \begin{block}{Equação Geral}
+        $$f(t) = c \cdot e^{kt} + b$$
+    \end{block}
+    
+    \textbf{Conectando com o Café ($T(t) = 63 \cdot e^{-0.05t} + 22$):}
+    \begin{enumerate}
+        \item \textbf{$b$ (Assíntota):} Valor de equilíbrio.
+        \begin{itemize} \item Café: $b=22$ (Temp. da sala). \end{itemize}
+        \item \textbf{$c$ (Amplitude):} Diferença inicial ($T_0 - b$).
+        \begin{itemize} \item Café: $c = 85 - 22 = 63$. \end{itemize}
+        \item \textbf{$k$ (Taxa):} Velocidade do processo.
+        \begin{itemize} \item Café: $k = -0.05$ (Negativo = Decaimento). \end{itemize}
+    \end{enumerate}
 \end{frame}
 
 \section{5. Exercícios Propostos}
@@ -177,7 +181,6 @@
     \textbf{Parte 2: Aplicações}
     \begin{itemize}
         \item \textbf{Carga de Capacitor:} $V_C(t) = 9(1 - e^{-2.5t})$
-        \item \textbf{Resfriamento de Café:} $T(t) = 22 + 63e^{-0.05t}$
         \item \textbf{Decaimento Radioativo:} $M(t) = 50e^{-0.1t}$
     \end{itemize}
     

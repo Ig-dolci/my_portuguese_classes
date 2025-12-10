@@ -1,0 +1,7 @@
+\babel@toc {brazil}{}
+\beamer@sectionintoc {1}{1. Defini\IeC {\c c}\IeC {\~a}o da Fun\IeC {\c c}\IeC {\~a}o Exponencial}{3}{0}{1}
+\beamer@sectionintoc {2}{2. O N\IeC {\'u}mero de Euler}{5}{0}{2}
+\beamer@sectionintoc {3}{3. Motiva\IeC {\c c}\IeC {\~a}o: O Resfriamento do Caf\IeC {\'e}}{7}{0}{3}
+\beamer@sectionintoc {4}{4. A Forma Geral e Modelagem}{8}{0}{4}
+\beamer@sectionintoc {5}{5. Exerc\IeC {\'\i }cios Propostos}{9}{0}{5}
+\beamer@sectionintoc {6}{Extra}{10}{0}{6}
