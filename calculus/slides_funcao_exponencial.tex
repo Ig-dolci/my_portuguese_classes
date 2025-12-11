@@ -150,20 +150,23 @@
 \section{4. A Forma Geral e Modelagem}
 
 \begin{frame}{4. A Forma Geral e Modelagem}
-    O exemplo do café segue um padrão universal. Podemos generalizar para a \textbf{Forma Padrão}:
+    O exemplo do café ilustra um padrão universal. Podemos generalizar para a \textbf{Forma Geral}:
     
     \begin{block}{Equação Geral}
-        $$f(t) = c \cdot e^{kt} + b$$
+        $$f(x) = c \cdot a^x + b$$
     \end{block}
     
-    \textbf{Conectando com o Café ($T(t) = 63 \cdot e^{-0.05t} + 22$):}
+    \textbf{Significado dos Parâmetros:}
     \begin{enumerate}
-        \item \textbf{$b$ (Assíntota):} Valor de equilíbrio.
+        \item \textbf{$b$ (Assíntota):} Valor de equilíbrio ($t \to \infty$).
         \begin{itemize} \item Café: $b=22$ (Temp. da sala). \end{itemize}
-        \item \textbf{$c$ (Amplitude):} Diferença inicial ($T_0 - b$).
+        \item \textbf{$c$ (Amplitude):} Diferença inicial ($f(0) - b$).
         \begin{itemize} \item Café: $c = 85 - 22 = 63$. \end{itemize}
-        \item \textbf{$k$ (Taxa):} Velocidade do processo.
-        \begin{itemize} \item Café: $k = -0.05$ (Negativo = Decaimento). \end{itemize}
+        \item \textbf{$a$ (Fator de Crescimento/Decaimento):}
+        \begin{itemize} 
+            \item Café: $a = e^{-0.05} \approx 0.95$ (Decaimento, pois $a < 1$).
+            \item Nota: Na engenharia, frequentemente usamos $a = e^k$.
+        \end{itemize}
     \end{enumerate}
 \end{frame}
 
@@ -215,3 +218,100 @@
 \end{frame}
 
 \end{document}
+
+
+O IMT atua nas três áreas do ensino superior, Ensino, Pesquisa e Extensão. Isso se realiza nos cursos de graduação e pós-graduação e ainda no Centro de Pesquisas que, por meio da Divisão de Inovação e Qualidade (DIQ), responsável pelo gerenciamento do relacionamento institucional com empresas, instituições e entidades de classe, tem o objetivo de estimular ações acadêmicas e empresariais por meio de convênios, além de auxiliar os pesquisadores do IMT na submissão de projetos de P&D.
+
+Por tudo isso, gostaríamos de suscintamente conhecer sua potencialidade para contribuir com o IMT de modo mais amplo, seja atuando na pós-graduação, em projetos de pesquisa, serviços à comunidade/empresas, etc. Justifique essa possibilidade de contribuição indicando suas competências e sua pretensão de crescimento na área indicada.
+
+Para conhecer um pouco de cada área do IMT acesse:
+
+Graduação - https://www.maua.br/graduacao
+Pós-graduação - https://www.maua.br/pos-graduacao
+Centro de pesquisa do IMT - https://www.maua.br/solucoes
+Extensão - https://www.maua.br/graduacao/extensao
+
+Colaboração na área de ensino de graduação
+
+Colaboração na área de ensino de pós-graduação
+
+Proposta de Atuação: Ensino de Pós-Graduação e Pesquisa Avançada
+
+Minha formação como Doutora em Ciências pela USP e minha atual posição de Research Associate no Imperial College London me posicionam para contribuir com a pós-graduação do IMT em áreas de fronteira da engenharia computacional. Minha experiência em desenvolvimento de software científico (Firedrake, Pyadjoint) e aplicação em problemas complexos (interação fluido-estrutura, inversão sísmica) permite a oferta de disciplinas e orientações que conectam a teoria matemática rigorosa às demandas industriais de alta tecnologia.
+
+1. Disciplinas Propostas (Eletivas e Especialização)
+Com base na minha expertise técnica e publicações em revistas de alto impacto (JFM, IJNME), proponho a criação ou atualização de disciplinas em três eixos principais:
+
+*   Modelagem e Simulação Avançada (CFD & Multifísica):
+    *   Foco: Ir além do uso de softwares comerciais ("caixa preta"), ensinando os alunos a implementar e customizar solvers utilizando métodos de elementos finitos modernos.
+    *   Ferramentas: Uso do ecossistema Firedrake/PETSc para simulações de alta fidelidade.
+*   Otimização e Problemas Inversos:
+    *   Foco: Introduzir técnicas de Otimização Baseada em Adjunção (Adjoint-based Optimization) e Assimilação de Dados, cruciais para a indústria 4.0 e setor de energia (como demonstrado em meu trabalho no RCGI com FWI - Full Waveform Inversion).
+*   Computação de Alto Desempenho (HPC) para Engenharia:
+    *   Foco: Preparar engenheiros para lidar com grandes volumes de dados e simulações massivas, abordando paralelismo (MPI), conteinerização (Docker) e uso de clusters, competências raras e valorizadas no mercado.
+
+2. Orientação e Pesquisa
+Minha trajetória de pesquisa internacional permite oferecer aos alunos de pós-graduação:
+*   Temas de Tese Relevantes: Orientação em projetos que aplicam métodos numéricos avançados em problemas reais, como energias renováveis, geofísica e bioengenharia.
+*   Conexão Internacional: Possibilidade de co-orientações e intercâmbio de conhecimento com grupos de pesquisa de excelência (como o do Imperial College), elevando o nível das publicações do programa.
+
+3. Diferencial para o Programa
+Minha atuação visa formar mestres e doutores com perfil "híbrido": engenheiros com profunda base matemática e habilidade de desenvolvimento de software. Esse perfil é essencial para liderar departamentos de P&D em grandes empresas ou seguir carreira acadêmica de excelência.
+
+Colaboração na área de extensão acadêmica (serviços à comunidade/empresas)
+
+Proposta de Atuação: Extensão Tecnológica e Inovação Industrial
+
+A extensão universitária é o canal por onde o conhecimento acadêmico transforma a sociedade. Minha experiência no desenvolvimento de software open source (Firedrake, Pyadjoint) e em projetos de P&D com financiamento industrial (RCGI/Shell) me permite propor ações de extensão que aproximam o IMT das demandas reais do mercado de tecnologia.
+
+1. Software como Serviço à Comunidade (Open Source)
+O desenvolvimento e manutenção de bibliotecas científicas públicas é uma forma moderna e escalável de extensão.
+*   Proposta: Criar iniciativas onde alunos e professores desenvolvam módulos de simulação open source para resolver problemas de pequenas e médias empresas locais. Isso dá visibilidade global ao IMT (via GitHub/comunidade científica) e oferece soluções acessíveis ao mercado.
+
+2. Cursos de Curta Duração e Capacitação Profissional
+Existe uma lacuna de formação em ferramentas computacionais modernas no mercado de engenharia tradicional.
+*   Proposta: Ofertar workshops e cursos de verão abertos à comunidade externa focados em upskilling:
+    *   "Python para Engenharia e Automação".
+    *   "Introdução à Computação em Nuvem e HPC para Indústria".
+    *   "Modelagem Matemática Aplicada a Negócios".
+
+3. Consultoria e Projetos de P&D (DIQ)
+Minha vivência em centros de pesquisa focados em inovação (RCGI) me capacitou a traduzir "dores" da indústria em problemas matemáticos solucionáveis.
+*   Proposta: Atuar junto à Divisão de Inovação e Qualidade (DIQ) na prospecção e execução de projetos de consultoria técnica avançada, especialmente em setores que demandam otimização de processos e análise de fluidos, trazendo receitas e parcerias estratégicas para o Instituto.
+
+Colaboração junto ao Centro de Pesquisa do IMT
+
+Proposta de Atuação: Pesquisa Aplicada e Internacionalização
+
+O Centro de Pesquisas do IMT é o motor de inovação da instituição. Minha experiência como pesquisadora em projetos de grande porte (RCGI/FAPESP/Shell e Imperial College) me qualifica para fortalecer a atuação do centro em três frentes estratégicas:
+
+1. Captação de Recursos e Projetos de P&D
+Tenho experiência na execução de projetos financiados pela indústria (setor de energia).
+*   Proposta: Atuar ativamente na elaboração de propostas para agências de fomento (FAPESP, CNPq) e parceiros privados, focando em temas de alta relevância como Transição Energética e Otimização de Processos Industriais. Minha expertise em métodos adjuntos (otimização) é diretamente aplicável para reduzir custos operacionais em parceiros industriais.
+
+2. Internacionalização da Pesquisa
+A ciência de ponta é global.
+*   Proposta: Estabelecer pontes de colaboração entre o IMT e o Imperial College London (e outros centros europeus), facilitando o intercâmbio de pesquisadores e a realização de workshops conjuntos. Isso eleva o fator de impacto das publicações do centro e atrai visibilidade internacional.
+
+3. Desenvolvimento de Tecnologia Proprietária vs. Open Source
+*   Proposta: Equilibrar o desenvolvimento de soluções específicas para empresas (via DIQ) com a contribuição para softwares livres consolidados (como o Firedrake). Isso garante que o IMT retenha know-how tecnológico interno ao mesmo tempo que se beneficia da inovação colaborativa global.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
